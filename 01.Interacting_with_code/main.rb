@@ -5,7 +5,7 @@ database_path = "db/jukebox.sqlite"
 db = SQLite3::Database.new(database_path)
 
 def number_of_rows(db,table_name)
-  rows = db.execute ("SELECT COUNT(*) FROM #{table_name};")
+  rows = db.execute ("SELECT COUNT (*) FROM #{table_name};")
   rows.flatten
 end
 
@@ -23,7 +23,7 @@ artists = db.execute ("SELECT Name FROM Artist ORDER BY Name;")
 love_songs = db.execute ("SELECT Name FROM Track WHERE Name LIKE '%love%' ;")
 
 # # returns all the tracks that are longer than 5 minutes.
-long_tracks = db.execute ("SELECT Name FROM Track WHERE Milliseconds > 359999 ;")
+long_tracks = db.execute ("SELECT Name FROM Track WHERE Milliseconds > 299999 ;")
 
 puts artists
 puts "---"
