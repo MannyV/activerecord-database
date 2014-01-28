@@ -24,9 +24,10 @@ require './models/recipe'
 
 	elsif choice == 2
 		Recipe.delete_all()
+		puts "Done!"
 	  
 	elsif choice == 3
-		Recipe.all.name
+		puts Recipe.all
 
 	else
 	  puts "i did not understand"
