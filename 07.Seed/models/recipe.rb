@@ -1,3 +1,4 @@
 class Recipe < ActiveRecord::Base
-  # your code here
+  attr_accessor :name, :description, :length, :difficulty, :rating
+  
 end
